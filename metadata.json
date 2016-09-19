@@ -1,0 +1,31 @@
+{
+  "name": "andrewwippler-do_dns",
+  "version": "0.1.0",
+  "author": "andrewwippler",
+  "summary": "Takes the current droplet public IP and creates a Digital Ocean DNS record with it.",
+  "license": "MIT",
+  "source": "https://github.com/andrewwippler/do_dns",
+  "project_page": "https://github.com/andrewwippler/do_dns",
+  "issues_url": "https://github.com/andrewwippler/do_dns/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">= 1.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    }
+  ]
+}
