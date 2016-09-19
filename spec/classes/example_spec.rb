@@ -12,12 +12,6 @@ describe 'do_dns' do
           it { is_expected.to compile.with_all_deps }
 
           it { is_expected.to contain_class('do_dns::params') }
-          it { is_expected.to contain_class('do_dns::install').that_comes_before('do_dns::config') }
-          it { is_expected.to contain_class('do_dns::config') }
-          it { is_expected.to contain_class('do_dns::service').that_subscribes_to('do_dns::config') }
-
-          it { is_expected.to contain_service('do_dns') }
-          it { is_expected.to contain_package('do_dns').with_ensure('present') }
         end
       end
     end
