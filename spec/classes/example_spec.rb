@@ -12,6 +12,7 @@ describe 'do_dns' do
           it { is_expected.to compile.with_all_deps }
 
           it { is_expected.to contain_class('do_dns::params') }
+          it { expect { is_expected.to contain_package('do_dns') }.to raise_error(Puppet::Failure) }
         end
       end
     end
