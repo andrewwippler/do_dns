@@ -1,14 +1,20 @@
 # Class: do_dns
 # ===========================
 #
-# Full description of class do_dns here.
+# Uses the Digital Ocean metadata of your droplet and issues an api curl command to set the dns record based on the droplet's hostname.
 #
 # Parameters
 # ----------
 #
-# * `sample parameter`
-#   Explanation of what this parameter affects and what it defaults to.
-#   e.g. "Specify one or more upstream ntp servers as an array."
+# * `api_key`
+# This is your Digital Ocean API key for managing DNS records
+#
+# * `dns_zone`
+#This is the domain zone you want to update.
+#
+# * `filename` (optional)
+#This is an optional setting. Configures the filename of the script to execute. Useful if you need to update the DNS record.
+#
 #
 class do_dns (
   $api_key  = $::do_dns::params::api_key,
