@@ -11,7 +11,8 @@
 
 ## Overview
 
-Grabs the Digital Ocean public IP address and points it to a Digital Ocean DNS record using the `$::hostname` fact.       
+Grabs the Digital Ocean public IP address and points it to a Digital Ocean DNS record using the `$::hostname` fact.
+[![Build Status](https://travis-ci.org/andrewwippler/do_dns.svg?branch=master)](https://travis-ci.org/andrewwippler/do_dns)      
 
 ## Module Description
 
