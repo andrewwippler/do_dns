@@ -33,7 +33,7 @@ class do_dns (
   file { $filename:
     ensure  => file,
     mode    => '0755',
-    content => epp('do_dns/dns-update.epp')
+    content => epp('do_dns/dns-update.epp'),
     notify  => Exec['update-do-dns'],
   }
 
