@@ -21,11 +21,13 @@ describe 'do_dns::params' do
   # while all required parameters will require you to add a value
   let(:params) do
     {
-
+      :api_key => "xxx",
+      :dns_zone => "puppet.domain.tld",
+      :filename => "/usr/bin/update_dns.sh",
     }
   end
   # add these two lines in a single test block to enable puppet and hiera debug mode
-  # Puppet::Util::Log.level = :debug
-  # Puppet::Util::Log.newdestination(:console)
-  
+   Puppet::Util::Log.level = :debug
+   Puppet::Util::Log.newdestination(:console)
+
 end

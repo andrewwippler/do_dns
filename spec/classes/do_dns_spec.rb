@@ -21,26 +21,25 @@ describe 'do_dns' do
   # while all required parameters will require you to add a value
   let(:params) do
     {
-      #:api_key => "$::do_dns::params::api_key",
-      #:dns_zone => "$::do_dns::params::dns_zone",
-      #:filename => "$::do_dns::params::filename",
+      :api_key => "xxx",
+      :dns_zone => "puppet.domain.tld",
+      :filename => "$::do_dns::params::filename",
 
     }
   end
   # add these two lines in a single test block to enable puppet and hiera debug mode
-  # Puppet::Util::Log.level = :debug
-  # Puppet::Util::Log.newdestination(:console)
-  
+   Puppet::Util::Log.level = :debug
+   Puppet::Util::Log.newdestination(:console)
+
   it do
     is_expected.to contain_file("$::do_dns::params::filename")
         .with({
           "ensure" => "file",
           "mode" => "0755",
-          "content" => [],
           "notify" => "Exec[update-do-dns]",
           })
   end
-    
+
   it do
     is_expected.to contain_exec("update-do-dns")
         .with({
@@ -48,5 +47,5 @@ describe 'do_dns' do
           "refreshonly" => true,
           })
   end
-    
+
 end

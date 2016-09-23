@@ -17,10 +17,10 @@
 #
 #
 class do_dns (
-  $api_key  = $::do_dns::params::api_key,
-  $dns_zone = $::do_dns::params::dns_zone,
-  $filename = $::do_dns::params::filename,
-) inherits ::do_dns::params {
+  $api_key  = $do_dns::params::api_key,
+  $dns_zone = $do_dns::params::dns_zone,
+  $filename = $do_dns::params::filename,
+) inherits do_dns::params {
 
   if ($api_key == '') {
       fail('api_key must be set')
