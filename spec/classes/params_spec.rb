@@ -27,7 +27,7 @@ describe 'do_dns::params' do
     }
   end
   # add these two lines in a single test block to enable puppet and hiera debug mode
-   Puppet::Util::Log.level = :debug
-   Puppet::Util::Log.newdestination(:console)
+  # Puppet::Util::Log.level = :debug
+  # Puppet::Util::Log.newdestination(:console)
 
 end
