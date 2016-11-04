@@ -1,6 +1,6 @@
 {
   "name": "andrewwippler-do_dns",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "andrewwippler",
   "summary": "Takes the current droplet public IP and creates a Digital Ocean DNS record with it.",
   "license": "MIT",
